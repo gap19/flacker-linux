@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+ <title>FLACker</title>
+ <defs>
+  <linearGradient id="disc" x1="0" y1="0" x2="1" y2="1">
+   <stop stop-color="#f6f9f9"/><stop offset=".55" stop-color="#cfdcdf"/><stop offset="1" stop-color="#9fb3b8"/>
+  </linearGradient>
+  <linearGradient id="sleeve" x1="0" y1="0" x2="0" y2="1">
+   <stop stop-color="#ecbc95"/><stop offset="1" stop-color="#c88a60"/>
+  </linearGradient>
+  <linearGradient id="gleam" x1="0" y1="0" x2="1" y2="0">
+   <stop stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+ </defs>
+ <ellipse cx="64" cy="112" rx="52" ry="6" fill="#000" opacity=".2"/>
+ <!-- The disc slides out from behind the square sleeve. -->
+ <circle cx="80" cy="60" r="42" fill="url(#disc)"/>
+ <circle cx="80" cy="60" r="42" fill="none" stroke="#7d9399" stroke-width="1.5"/>
+ <circle cx="80" cy="60" r="35" fill="none" stroke="#8fa5ab" stroke-opacity=".45"/>
+ <circle cx="80" cy="60" r="28" fill="none" stroke="#8fa5ab" stroke-opacity=".45"/>
+ <path d="M80 18a42 42 0 0 1 36 20L80 60Z" fill="url(#gleam)" opacity=".7"/>
+ <circle cx="80" cy="60" r="14" fill="#e4ecee" stroke="#8fa5ab" stroke-width="1.5"/>
+ <circle cx="80" cy="60" r="5.5" fill="#1c292e"/>
+ <!-- Square sleeve; its artwork repeats the square and the circle. -->
+ <rect x="6" y="36" width="68" height="68" rx="7" fill="#0b1214" opacity=".3"/>
+ <rect x="6" y="32" width="68" height="68" rx="7" fill="url(#sleeve)"/>
+ <rect x="16" y="42" width="48" height="48" rx="4" fill="#1c292e"/>
+ <rect x="24" y="50" width="32" height="32" rx="2" fill="none" stroke="#e5af87" stroke-width="3"/>
+ <circle cx="40" cy="66" r="7" fill="#e5af87"/>
+</svg>

@@ -1,0 +1,8 @@
+# Build environment for the Debian/Ubuntu package (Debian 13 has the oldest supported GTK/libadwaita).
+#   podman build -t flacker-deb packaging/debian
+#   podman run --rm -v "$PWD:/src:Z" -w /src flacker-deb ./scripts/build-deb.sh
+FROM docker.io/library/debian:13
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends cargo rustc gcc make pkg-config dpkg-dev ca-certificates \
+      libgtk-4-dev libadwaita-1-dev libgstreamer1.0-dev libsqlite3-dev libfontconfig-dev \
+ && rm -rf /var/lib/apt/lists/*

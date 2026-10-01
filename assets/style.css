@@ -1,0 +1,172 @@
+/* Flacker 0.15: the record is the interface. */
+.flacker { font-family:'Source Sans 3',sans-serif; font-size:1.04em; color:var(--window-fg-color); background:var(--window-bg-color); }
+.flacker.dark {
+ --window-bg-color:#111617; --window-fg-color:#f0f4f4; --view-bg-color:#111617; --view-fg-color:#f0f4f4;
+ --card-bg-color:#20282a; --card-fg-color:#f0f4f4; --headerbar-bg-color:#111617; --headerbar-fg-color:#f0f4f4;
+ --dialog-bg-color:#20282a; --dialog-fg-color:#f0f4f4; --popover-bg-color:#232c2e; --popover-fg-color:#f0f4f4;
+ --accent-bg-color:#e5af87; --accent-fg-color:#201710; --accent-color:#edbd97;
+ --as-muted:#acb9bd; --as-line:#465457; --as-hover:#283437; --as-dock:rgba(33,43,46,0.97);
+}
+.flacker.light {
+ --window-bg-color:#e7ecee; --window-fg-color:#142024; --view-bg-color:#e7ecee; --view-fg-color:#142024;
+ --card-bg-color:#f8fafb; --card-fg-color:#142024; --headerbar-bg-color:#e7ecee; --headerbar-fg-color:#142024;
+ --dialog-bg-color:#f8fafb; --dialog-fg-color:#142024; --popover-bg-color:#f8fafb; --popover-fg-color:#142024;
+ --accent-bg-color:#724527; --accent-fg-color:#fff8f2; --accent-color:#724527;
+ --as-muted:#52676e; --as-line:#b9c9cd; --as-hover:#d7e1e4; --as-dock:rgba(249,252,253,0.98);
+}
+window.flacker > contents,.flacker .main-surface { background:var(--window-bg-color); color:var(--window-fg-color); }
+.flacker headerbar { background:transparent; box-shadow:none; border:none; }
+.app-header { padding:3px 20px; }
+.brand { font-family:'League Gothic',sans-serif; font-size:2.3em; font-weight:400; letter-spacing:0; }
+.flacker button { transition:background-color 120ms ease-out,color 120ms ease-out; }
+.flacker button:focus-visible,.flacker entry:focus-within,.flacker scale:focus-visible { outline-color:var(--accent-color); }
+.flacker button.suggested-action { font-weight:650; padding:12px 22px; border-radius:24px; box-shadow:none; }
+.flacker searchentry { border-radius:24px; min-height:36px; padding:1px 12px; background:var(--card-bg-color); box-shadow:none; }
+.navigation-rail { margin:0 12px; }
+.global-navigation { background:transparent; }
+.global-navigation button:focus-visible { outline:2px solid var(--accent-color); outline-offset:1px; }
+.global-navigation button { padding:6px 12px; border-radius:22px; color:var(--as-muted); font-weight:600; background:transparent; }
+.global-navigation button.selected { color:var(--window-bg-color); background:var(--window-fg-color); }
+.global-navigation button:not(.selected):hover { color:var(--window-fg-color); background:var(--as-hover); }
+.action-flow > flowboxchild,.action-flow > flowboxchild:hover,.action-flow > flowboxchild:focus,.action-flow > flowboxchild:selected { padding:0; background:none; outline:none; box-shadow:none; }
+.action-flow { background:transparent; }
+.side-note,.subtitle { color:var(--as-muted); }
+.library-heading { margin:8px 24px 4px; }
+.library-heading .page-title { font-size:2em; letter-spacing:0; }
+.page-title { font-family:'League Gothic',sans-serif; font-size:2.7em; font-weight:400; letter-spacing:0; }
+.library-heading menubutton > button { border-radius:22px; padding:8px 14px; background:var(--card-bg-color); }
+.library-heading menubutton.active > button { color:var(--accent-fg-color); background:var(--accent-bg-color); }
+.collection-stage { margin:2px 22px 0; }
+.collection-feature { padding:10px 22px; }
+.feature-title { font-family:'League Gothic',sans-serif; font-size:2.1em; font-weight:400; letter-spacing:0; }
+.feature-artist { font-size:1em; font-weight:400; color:#d1dddf; }
+.scene-content {
+ color:#f5f8f8; --window-fg-color:#f5f8f8; --as-muted:#b9c9cf;
+ --card-bg-color:rgba(255,255,255,0.085); --card-fg-color:#f5f8f8;
+ --view-bg-color:transparent; --view-fg-color:#f5f8f8;
+ --accent-bg-color:#edf3f4; --accent-fg-color:#112127; --accent-color:#edbd97;
+}
+.scene-content .action-flow button { background:rgba(255,255,255,0.08); color:#f5f8f8; padding:10px 16px; border-radius:22px; box-shadow:none; }
+.scene-content .action-flow button:hover { background:rgba(255,255,255,0.15); }
+.scene-content .action-flow button.suggested-action { background:#edf3f4; color:#112127; }
+.album-grid { padding:6px 16px 12px; background:transparent; }
+.album-grid > child { padding:4px 6px; border-radius:14px; }
+.album-grid > child:focus-visible { outline:2px solid var(--accent-color); outline-offset:-2px; }
+.album-tile { padding:4px 6px 8px; background:transparent; }
+.album-cover { background:transparent; }
+.album-title { font-weight:600; font-size:1em; min-height:2.8em; padding:5px 2px 1px; }
+.album-artist { color:var(--as-muted); font-size:0.94em; padding:1px 2px; }
+.album-year { color:var(--as-muted); font-size:0.88em; padding:1px 2px; }
+.album-context { margin:0 28px 10px; padding:7px 12px; border-radius:20px; color:var(--as-muted); }
+.album-stage { margin:0 28px 10px; }
+.album-composition { padding:34px 38px; }
+.album-object { padding:6px 10px 14px; }
+.album-headline { font-family:'League Gothic',sans-serif; font-size:2.9em; font-weight:400; letter-spacing:0; }
+.album-artist-name { font-size:1.25em; color:#c5d4d7; }
+.repertoire { background:rgba(9,20,24,0.70); padding:22px 18px; border-radius:18px; }
+.section-title { font-family:'League Gothic',sans-serif; font-size:1.7em; font-weight:400; letter-spacing:0; }
+.artist-grid { padding:6px 16px 16px; background:transparent; }
+.artist-grid > child { padding:4px; border-radius:16px; }
+.artist-grid > child:hover { background:var(--as-hover); }
+.artist-grid > child:focus-visible { outline:2px solid var(--accent-color); outline-offset:-2px; }
+.artist-card { padding:8px 10px; }
+.artist-name { font-family:'League Gothic',sans-serif; font-size:1.55em; font-weight:400; letter-spacing:0; }
+.artist-count { color:var(--as-muted); font-size:0.9em; }
+.track-list { background:transparent; }
+.track-list row { padding:0; border-radius:8px; }
+.track-list row:selected { background:alpha(var(--accent-bg-color),0.10); }
+.track-row { padding:9px 14px 9px 18px; }
+.track-number { min-width:28px; color:var(--as-muted); font-variant-numeric:lining-nums tabular-nums; }
+.track-title { font-weight:600; }
+/* The playing track, wherever its album or list is shown (same look as the queue). */
+.track-row.current { background:alpha(var(--accent-bg-color),0.10); border-radius:8px; }
+.track-row.current .track-title, .track-row.current .track-number { color:var(--accent-color); }
+.track-meta { color:var(--as-muted); font-size:0.9em; }
+.track-time { font-variant-numeric:lining-nums tabular-nums; color:var(--as-muted); }
+.track-favorite { color:var(--accent-color); -gtk-icon-size:14px; }
+.track-menu > button { padding:6px; border-radius:50%; color:var(--as-muted); }
+.menu-actions button { padding:8px 14px; border-radius:8px; font-weight:400; }
+.audio-facts { margin:4px 2px; }
+.fact-name { color:var(--as-muted); font-size:0.92em; min-width:7.5em; }
+.fact-value { font-variant-numeric:lining-nums tabular-nums; }
+.time-toggle { padding:0; min-height:0; min-width:0; border-radius:8px; }
+.deck { background:var(--as-dock); border-radius:19px; padding:4px 14px 2px; box-shadow:0 12px 28px rgba(0,0,0,0.26); border:none; }
+.now-link { padding:0; border-radius:12px; }
+.display { background:transparent; }
+.display-title { font-size:1.08em; font-weight:600; }
+.display-artist { font-size:0.94em; color:var(--as-muted); }
+.display-quality { font-size:0.8em; color:var(--as-muted); }
+.display-time { font-size:1em; font-variant-numeric:lining-nums tabular-nums; color:var(--as-muted); }
+.transport button { min-width:28px; min-height:28px; padding:6px; border-radius:50%; background:transparent; box-shadow:none; border:0; }
+.transport button:hover { background:var(--as-hover); }
+.transport button.play { min-width:30px; min-height:30px; padding:7px; background:var(--window-fg-color); color:var(--window-bg-color); }
+.transport button:active { background:var(--accent-bg-color); color:var(--accent-fg-color); }
+.deck button.active { color:var(--accent-color); background:alpha(var(--accent-bg-color),0.13); }
+.deck scale trough { min-height:3px; background:var(--as-line); }
+.deck scale highlight { background:var(--window-fg-color); }
+.deck scale slider { min-width:10px; min-height:10px; padding:0; margin:-4px 0; background:var(--window-fg-color); border:none; box-shadow:none; }
+.deck scale highlight { min-width:0; border-radius:3px; }
+.position { font-size:0.82em; color:var(--as-muted); font-variant-numeric:lining-nums tabular-nums; }
+.listening-stage { margin:4px 28px 10px; }
+.listening { margin:32px 38px; }
+.listening-title { font-family:'League Gothic',sans-serif; font-size:2.8em; font-weight:400; letter-spacing:0; }
+.listening-panel { background:rgba(8,20,23,0.70); border-radius:18px; padding:22px; }
+.listening-panel stackswitcher button { border-radius:22px; padding:9px 18px; background:transparent; color:#bfd0d5; }
+.listening-panel stackswitcher button:checked { background:#eff5f5; color:#112127; }
+.lyrics-text { font-family:'Source Sans 3',sans-serif; font-size:1.3em; line-height:1.65; background:transparent; color:var(--window-fg-color); }
+.lyrics-text text,.edition-text text { background:transparent; }
+.lyrics-tools { padding:4px 0 12px; }
+.edition-text { background:transparent; line-height:1.5; }
+.art-viewer .art-stage { background:#080c0e; }
+.art-toolbar { margin:12px 14px; }
+.art-toolbar button { border-radius:50%; }
+.art-thumbnails { background:transparent; padding:8px 12px 14px; }
+.art-thumbnails > row { border-radius:6px; padding:5px; }
+.art-thumbnails > row:selected { background:var(--as-hover); outline:2px solid var(--accent-color); }
+.cover-button,.cover-button:hover { padding:0; border:0; background:transparent; box-shadow:none; border-radius:0; }
+.empty-title,.flacker statuspage .title { font-family:'League Gothic',sans-serif; font-weight:400; font-size:2.2em; }
+.pill { font-size:0.87em; color:var(--as-muted); padding:4px 0; }
+.queue-row { padding:8px 6px; }
+.queue-row.current { background:alpha(var(--accent-bg-color),0.10); border-left:3px solid var(--accent-color); }
+.queue-row button { padding:6px; }
+.focus-title { font-family:'League Gothic',sans-serif; font-size:3em; font-weight:400; letter-spacing:0; }
+.focus-core { margin:20px 44px 28px; }
+.focus-timeline { margin-top:6px; }
+.focus-timeline scale trough { min-height:3px; }
+.compact .brand { font-size:1.9em; letter-spacing:0; }
+.compact .app-header { padding:2px 10px; }
+.compact .navigation-rail { margin:0 4px; }
+.compact .global-navigation button { padding:6px 10px; }
+.compact .library-heading { margin:5px 20px; }
+.compact .album-stage,.compact .listening-stage { margin:0 14px 6px; }
+.compact .album-context { margin:0 14px 6px; }
+.compact .album-composition { padding:16px 18px; }
+.compact .album-headline { font-size:1.7em; letter-spacing:-0.5px; }
+.compact .album-object { padding:0; }
+.compact .album-artist-name { font-size:1.05em; }
+.compact .repertoire { padding:12px; }
+.compact .section-title { font-size:1.25em; }
+.compact .track-row { padding:7px 10px; }
+.compact .deck { padding:3px 12px 2px; border-radius:19px; }
+.compact .display-title { font-size:1em; }
+.compact .display-artist { font-size:0.9em; }
+.compact-listening { margin:16px 18px; }
+.compact-listening .listening-title { font-size:1.65em; }
+.compact-listening .listening-panel { padding:14px; }
+.compact-listening .lyrics-text { font-size:1.2em; }
+
+.navigation-select > button { border-radius:22px; padding:6px 14px; background:var(--window-fg-color); color:var(--window-bg-color); }
+
+/* Text uses the native font metrics; the inset protects glyph overhangs and accents. */
+.flacker label { padding:1px 2px; }
+.flacker .album-title { padding:5px 2px 1px; }
+.track-number,.track-time,.display-time,.position { font-family:'Source Sans 3',sans-serif; padding:2px 4px; }
+.track-number { min-width:2.4em; }
+.track-time { min-width:3.4em; }
+.feature-explore { border-radius:22px; padding:9px 16px; color:#f5f8f8; background:rgba(255,255,255,0.12); }
+.feature-explore:hover { background:rgba(255,255,255,0.2); }
+.deck scale { padding-top:4px; padding-bottom:4px; min-height:12px; }
+.deck .display-quality { font-size:0.8em; }
+.compact .collection-stage { margin:2px 14px 0; }
+.compact .collection-feature { padding:8px 12px; }
+.compact .feature-title { font-size:1.8em; }

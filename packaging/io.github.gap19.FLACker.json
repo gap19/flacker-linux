@@ -1,0 +1,19 @@
+{
+  "app-id": "io.github.gap19.FLACker",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "50",
+  "sdk": "org.gnome.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
+  "command": "flacker",
+  "finish-args": ["--share=ipc", "--socket=wayland", "--socket=fallback-x11", "--socket=pulseaudio", "--device=dri", "--filesystem=xdg-music:ro", "--own-name=org.mpris.MediaPlayer2.flacker"],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/rust-stable/bin",
+    "env": {"CARGO_HOME": "/run/build/flacker/.cargo-home", "CARGO_BUILD_JOBS": "2"}
+  },
+  "modules": [{
+    "name": "flacker",
+    "buildsystem": "simple",
+    "build-commands": ["cargo build --release --locked --offline", "make install PREFIX=/app"],
+    "sources": [{"type": "archive", "path": "../dist/flacker-1.0.0.tar.gz"}]
+  }]
+}

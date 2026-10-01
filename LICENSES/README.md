@@ -1,0 +1,119 @@
+# Third-party dependency notices
+
+Generated from Cargo.lock. Crate sources in source releases retain their original licenses.
+
+- **autocfg 1.5.1** — Apache-2.0 OR MIT
+- **bitflags 2.13.2** — MIT OR Apache-2.0
+- **block-buffer 0.10.4** — MIT OR Apache-2.0
+- **cairo-rs 0.21.5** — MIT
+- **cairo-sys-rs 0.21.5** — MIT
+- **cfg-expr 0.20.9** — MIT OR Apache-2.0
+- **cfg-if 1.0.5** — MIT OR Apache-2.0
+- **cpufeatures 0.2.17** — MIT OR Apache-2.0
+- **crypto-common 0.1.7** — MIT OR Apache-2.0
+- **digest 0.10.7** — MIT OR Apache-2.0
+- **either 1.18.0** — MIT OR Apache-2.0
+- **equivalent 1.0.2** — Apache-2.0 OR MIT
+- **fallible-iterator 0.3.0** — MIT/Apache-2.0
+- **fallible-streaming-iterator 0.1.9** — MIT/Apache-2.0
+- **field-offset 0.3.6** — MIT OR Apache-2.0
+- **foldhash 0.1.5** — Zlib
+- **futures-channel 0.3.34** — MIT OR Apache-2.0
+- **futures-core 0.3.34** — MIT OR Apache-2.0
+- **futures-executor 0.3.34** — MIT OR Apache-2.0
+- **futures-io 0.3.34** — MIT OR Apache-2.0
+- **futures-macro 0.3.34** — MIT OR Apache-2.0
+- **futures-task 0.3.34** — MIT OR Apache-2.0
+- **futures-util 0.3.34** — MIT OR Apache-2.0
+- **gdk-pixbuf 0.21.5** — MIT
+- **gdk-pixbuf-sys 0.21.5** — MIT
+- **gdk4 0.10.3** — MIT
+- **gdk4-sys 0.10.3** — MIT
+- **generic-array 0.14.7** — MIT
+- **getrandom 0.3.4** — MIT OR Apache-2.0
+- **gio 0.21.5** — MIT
+- **gio-sys 0.21.5** — MIT
+- **glib 0.21.5** — MIT
+- **glib-macros 0.21.5** — MIT
+- **glib-sys 0.21.5** — MIT
+- **gobject-sys 0.21.5** — MIT
+- **graphene-rs 0.21.5** — MIT
+- **graphene-sys 0.21.5** — MIT
+- **gsk4 0.10.3** — MIT
+- **gsk4-sys 0.10.3** — MIT
+- **gstreamer 0.24.5** — MIT OR Apache-2.0
+- **gstreamer-sys 0.24.5** — MIT
+- **gtk4 0.10.3** — MIT
+- **gtk4-macros 0.10.3** — MIT
+- **gtk4-sys 0.10.3** — MIT
+- **hashbrown 0.15.5** — MIT OR Apache-2.0
+- **hashbrown 0.17.1** — MIT OR Apache-2.0
+- **hashlink 0.10.0** — MIT OR Apache-2.0
+- **heck 0.5.0** — MIT OR Apache-2.0
+- **indexmap 2.14.2** — Apache-2.0 OR MIT
+- **itertools 0.14.0** — MIT OR Apache-2.0
+- **itoa 1.0.18** — MIT OR Apache-2.0
+- **kstring 2.0.2** — MIT OR Apache-2.0
+- **libadwaita 0.8.1** — MIT
+- **libadwaita-sys 0.8.1** — MIT
+- **libc 0.2.189** — MIT OR Apache-2.0
+- **libsqlite3-sys 0.35.0** — MIT
+- **memchr 2.8.3** — Unlicense OR MIT
+- **memoffset 0.9.1** — MIT
+- **muldiv 1.0.1** — MIT
+- **num-integer 0.1.47** — MIT OR Apache-2.0
+- **num-rational 0.4.2** — MIT OR Apache-2.0
+- **num-traits 0.2.19** — MIT OR Apache-2.0
+- **option-operations 0.6.1** — MIT/Apache-2.0
+- **pango 0.21.5** — MIT
+- **pango-sys 0.21.5** — MIT
+- **pastey 0.2.3** — MIT OR Apache-2.0
+- **pin-project-lite 0.2.17** — Apache-2.0 OR MIT
+- **pkg-config 0.3.34** — MIT OR Apache-2.0
+- **ppv-lite86 0.2.21** — MIT OR Apache-2.0
+- **proc-macro-crate 3.5.0** — MIT OR Apache-2.0
+- **proc-macro2 1.0.107** — MIT OR Apache-2.0
+- **quote 1.0.47** — MIT OR Apache-2.0
+- **r-efi 5.3.0** — MIT OR Apache-2.0 OR LGPL-2.1-or-later
+- **rand 0.9.5** — MIT OR Apache-2.0
+- **rand_chacha 0.9.0** — MIT OR Apache-2.0
+- **rand_core 0.9.5** — MIT OR Apache-2.0
+- **rusqlite 0.37.0** — MIT
+- **rustc_version 0.4.1** — MIT OR Apache-2.0
+- **same-file 1.0.6** — Unlicense/MIT
+- **semver 1.0.28** — MIT OR Apache-2.0
+- **serde 1.0.229** — MIT OR Apache-2.0
+- **serde_core 1.0.229** — MIT OR Apache-2.0
+- **serde_derive 1.0.229** — MIT OR Apache-2.0
+- **serde_json 1.0.151** — MIT OR Apache-2.0
+- **serde_spanned 1.1.1** — MIT OR Apache-2.0
+- **sha2 0.10.9** — MIT OR Apache-2.0
+- **slab 0.4.12** — MIT
+- **smallvec 1.16.2** — MIT OR Apache-2.0
+- **static_assertions 1.1.0** — MIT OR Apache-2.0
+- **syn 2.0.119** — MIT OR Apache-2.0
+- **syn 3.0.6** — MIT OR Apache-2.0
+- **system-deps 7.0.8** — MIT OR Apache-2.0
+- **target-lexicon 0.13.5** — Apache-2.0 WITH LLVM-exception
+- **thiserror 2.0.21** — MIT OR Apache-2.0
+- **thiserror-impl 2.0.21** — MIT OR Apache-2.0
+- **toml 1.1.6+spec-1.1.0** — MIT OR Apache-2.0
+- **toml_datetime 1.1.1+spec-1.1.0** — MIT OR Apache-2.0
+- **toml_edit 0.25.15+spec-1.1.0** — MIT OR Apache-2.0
+- **toml_parser 1.1.3+spec-1.1.0** — MIT OR Apache-2.0
+- **toml_writer 1.1.2+spec-1.1.0** — MIT OR Apache-2.0
+- **typenum 1.20.1** — MIT OR Apache-2.0
+- **unicode-ident 1.0.26** — (MIT OR Apache-2.0) AND Unicode-3.0
+- **vcpkg 0.2.15** — MIT/Apache-2.0
+- **version-compare 0.2.1** — MIT
+- **version_check 0.9.5** — MIT/Apache-2.0
+- **walkdir 2.5.0** — Unlicense/MIT
+- **wasip2 1.0.1+wasi-0.2.4** — Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
+- **winapi-util 0.1.11** — Unlicense OR MIT
+- **windows-link 0.2.1** — MIT OR Apache-2.0
+- **windows-sys 0.61.2** — MIT OR Apache-2.0
+- **winnow 1.0.4** — MIT
+- **wit-bindgen 0.46.0** — Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
+- **zerocopy 0.8.59** — BSD-2-Clause OR Apache-2.0 OR MIT
+- **zerocopy-derive 0.8.59** — BSD-2-Clause OR Apache-2.0 OR MIT
+- **zmij 1.0.23** — MIT

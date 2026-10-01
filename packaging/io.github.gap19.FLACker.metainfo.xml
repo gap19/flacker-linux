@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+ <id>io.github.gap19.FLACker</id>
+ <name>FLACker</name>
+ <summary>An offline home for your FLAC collection</summary>
+ <metadata_license>CC0-1.0</metadata_license>
+ <project_license>GPL-3.0-or-later</project_license>
+ <developer id="io.github.gap19"><name>Gabriel Aleixo</name></developer>
+ <url type="homepage">https://github.com/gap19/flacker-linux</url>
+ <url type="vcs-browser">https://github.com/gap19/flacker-linux</url>
+ <description>
+  <p>FLACker is a native GNOME player for personal FLAC libraries. Browse original album covers, read local lyrics and listen to albums in their intended order.</p>
+  <ul><li>High-resolution FLAC playback and gapless queues</li><li>Adaptive artwork viewer and static embedded, TXT, LRC, SRT and VTT lyrics</li><li>Local playlists, favorites and multi-disc albums</li><li>MPRIS desktop controls and an artwork-led interface</li><li>No accounts, telemetry or network services</li></ul>
+ </description>
+ <launchable type="desktop-id">io.github.gap19.FLACker.desktop</launchable>
+ <provides><binary>flacker</binary><mediatype>audio/flac</mediatype><mediatype>audio/x-flac</mediatype><mediatype>audio/x-mpegurl</mediatype></provides>
+ <supports><control>pointing</control><control>keyboard</control></supports>
+ <requires><display_length compare="ge">640</display_length></requires>
+ <releases>
+  <release version="1.0.0" date="2026-10-01"><description><p>First public release.</p></description></release>
+ </releases>
+ <content_rating type="oars-1.1"/>
+</component>

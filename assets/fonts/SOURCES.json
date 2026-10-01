@@ -1,0 +1,42 @@
+{
+  "downloaded": "2026-09-30",
+  "files": [
+    {
+      "file": "SourceSans3-Regular.otf",
+      "url": "https://raw.githubusercontent.com/adobe-fonts/source-sans/87b37a2daaed80fcb8e8ccb0085c4d72ddade12e/OTF/SourceSans3-Regular.otf",
+      "sha256": "08df266400933d3178d081a45f94a08814c3e55b4b7dd2e0ff69cb1329f13ab6"
+    },
+    {
+      "file": "SourceSans3-Semibold.otf",
+      "url": "https://raw.githubusercontent.com/adobe-fonts/source-sans/87b37a2daaed80fcb8e8ccb0085c4d72ddade12e/OTF/SourceSans3-Semibold.otf",
+      "sha256": "36f1cd2c344aa3109e64429bce41a41e4b2b923beb2db19b8dbf9bb56f05a4f9"
+    },
+    {
+      "file": "SourceSans3-Bold.otf",
+      "url": "https://raw.githubusercontent.com/adobe-fonts/source-sans/87b37a2daaed80fcb8e8ccb0085c4d72ddade12e/OTF/SourceSans3-Bold.otf",
+      "sha256": "7776ddb9f3eb58683e59f28d558d8896b768c2d0c80799fb3f1c56c54dfd98c9"
+    },
+    {
+      "file": "SourceSans3-It.otf",
+      "url": "https://raw.githubusercontent.com/adobe-fonts/source-sans/87b37a2daaed80fcb8e8ccb0085c4d72ddade12e/OTF/SourceSans3-It.otf",
+      "sha256": "430b9f0eb1170be0981706d14b6cf87122efba9d86c373bbdf69daf276421462"
+    },
+    {
+      "file": "LeagueGothic-OFL.txt",
+      "url": "https://github.com/theleagueof/league-gothic/releases/download/1.601/LeagueGothic-1.601.tar.xz",
+      "archive_path": "LeagueGothic-1.601/OFL.md",
+      "sha256": "6fa7527b6f9894e0dd8d5ae0050b51d37de15bcf7e6269d8dd690eb9df59aa40"
+    },
+    {
+      "file": "LeagueGothic-Regular.otf",
+      "url": "https://github.com/theleagueof/league-gothic/releases/download/1.601/LeagueGothic-1.601.tar.xz",
+      "archive_path": "LeagueGothic-1.601/static/OTF/LeagueGothic-Regular.otf",
+      "sha256": "877d83072137a11a78b75b90eaa7349d30a485007599568db09f8390be077d69"
+    },
+    {
+      "file": "SourceSans3-OFL.txt",
+      "url": "https://raw.githubusercontent.com/adobe-fonts/source-sans/87b37a2daaed80fcb8e8ccb0085c4d72ddade12e/LICENSE.md",
+      "sha256": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328"
+    }
+  ]
+}

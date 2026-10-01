@@ -1,0 +1,26 @@
+[Desktop Entry]
+Type=Application
+Name=FLACker
+GenericName=FLAC Music Player
+Comment=Your record collection, offline
+Keywords=FLAC;music;player;CD;album;
+Exec=flacker %F
+Icon=io.github.gap19.FLACker
+Terminal=false
+Categories=AudioVideo;Audio;Player;GTK;
+MimeType=audio/flac;audio/x-flac;audio/x-mpegurl;application/vnd.apple.mpegurl;
+StartupNotify=true
+DBusActivatable=false
+Actions=PlayPause;Next;Previous;
+
+[Desktop Action PlayPause]
+Name=Play / Pause
+Exec=flacker --play-pause
+
+[Desktop Action Next]
+Name=Next track
+Exec=flacker --next
+
+[Desktop Action Previous]
+Name=Previous track
+Exec=flacker --previous

@@ -1,0 +1,53 @@
+name: Build, test and package
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: flacker-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  fedora:
+    runs-on: ubuntu-latest
+    container: fedora:44
+    timeout-minutes: 45
+    steps:
+      - name: Install native toolchain
+        run: >-
+          dnf install -y git rust cargo rustfmt clippy gcc make python3
+          gtk4-devel libadwaita-devel gstreamer1-devel sqlite-devel fontconfig-devel
+          gstreamer1-plugins-base gstreamer1-plugins-good ffmpeg-free
+          rpm-build desktop-file-utils appstream dbus-daemon xorg-x11-server-Xvfb
+          pipewire pipewire-pulseaudio wireplumber pulseaudio-utils
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check formatting and lint
+        run: |
+          cargo fmt --check
+          cargo clippy --locked --all-targets -- -D warnings
+      - name: Unit and integration tests
+        run: cargo test --locked
+      - name: Playback and desktop integration
+        run: |
+          cargo build --locked
+          ./scripts/test-audio.sh
+          python3 tests/headless.py python3 tests/mpris_smoke.py target/debug/flacker
+          python3 tests/headless.py python3 tests/ui_review.py target/debug/flacker
+          python3 tests/headless.py python3 tests/scan_policy.py target/debug/flacker
+          python3 tests/headless.py python3 tests/output_server.py target/debug/flacker
+          python3 tests/headless.py python3 tests/session_stress.py target/debug/flacker
+      - name: Desktop metadata
+        run: |
+          desktop-file-validate packaging/io.github.gap19.FLACker.desktop
+          appstreamcli validate --no-net --override=url-homepage-missing=info packaging/io.github.gap19.FLACker.metainfo.xml
+      - name: Build RPM and offline source
+        run: ./scripts/build-rpm.sh
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: flacker-fedora44-x86_64
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14

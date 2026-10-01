@@ -1,0 +1,10 @@
+/target/
+/.build/
+/vendor/
+/.cargo/config.toml
+/dist/*.tar.gz
+/dist/*.tar.gz.sha256
+/dist/*.src.rpm
+*.sqlite*
+*.log
+__pycache__/
